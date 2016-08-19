@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425850791D66B2FF00B30D28 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425850781D66B2FF00B30D28 /* SystemConfiguration.framework */; };
+		4258507B1D66B30600B30D28 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4258507A1D66B30600B30D28 /* Security.framework */; };
+		4258507D1D66B30E00B30D28 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4258507C1D66B30E00B30D28 /* libz.tbd */; };
+		4258507F1D66B32900B30D28 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4258507E1D66B32800B30D28 /* Bugly.framework */; };
 		427326CD1D5B4BF600FFABEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 427326CC1D5B4BF600FFABEE /* main.m */; };
 		427326D01D5B4BF600FFABEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 427326CF1D5B4BF600FFABEE /* AppDelegate.m */; };
 		427326D31D5B4BF600FFABEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427326D21D5B4BF600FFABEE /* ViewController.m */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		425850781D66B2FF00B30D28 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4258507A1D66B30600B30D28 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4258507C1D66B30E00B30D28 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4258507E1D66B32800B30D28 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bugly.framework; path = CasualMeal/Bugly.framework; sourceTree = "<group>"; };
 		427326C81D5B4BF600FFABEE /* CasualMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasualMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		427326CC1D5B4BF600FFABEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		427326CE1D5B4BF600FFABEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,15 +41,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4258507D1D66B30E00B30D28 /* libz.tbd in Frameworks */,
+				4258507B1D66B30600B30D28 /* Security.framework in Frameworks */,
+				4258507F1D66B32900B30D28 /* Bugly.framework in Frameworks */,
+				425850791D66B2FF00B30D28 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		425850771D66B2F500B30D28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4258507E1D66B32800B30D28 /* Bugly.framework */,
+				4258507C1D66B30E00B30D28 /* libz.tbd */,
+				4258507A1D66B30600B30D28 /* Security.framework */,
+				425850781D66B2FF00B30D28 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		427326BF1D5B4BF600FFABEE = {
 			isa = PBXGroup;
 			children = (
+				425850771D66B2F500B30D28 /* Frameworks */,
 				427326CA1D5B4BF600FFABEE /* CasualMeal */,
 				427326C91D5B4BF600FFABEE /* Products */,
 			);
@@ -265,6 +289,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CasualMeal",
+				);
 				INFOPLIST_FILE = CasualMeal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -279,6 +307,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CasualMeal",
+				);
 				INFOPLIST_FILE = CasualMeal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
